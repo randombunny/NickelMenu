@@ -13,7 +13,8 @@ jobs:
         submodules: true
     - name: Patch
       run: |
-        git fetch origin pull/167/head:pr-167
+        git remote add appstream https://github.com/pgaskin/NickelMenu.git
+        git fetch appstream pull/167/head:pr-167
         git checkout pr-167
     - name: Build
       run: make all koboroot

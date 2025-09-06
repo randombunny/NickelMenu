@@ -75,7 +75,7 @@ NM_ACTION_(nickel_open) {
     if (dlsym(RTLD_DEFAULT, "_ZN11MainNavViewC1EP7QWidget")) {
         NM_LOG("nickel_open: detected firmware >15505 (new nav tab bar), checking special cases");
 
-        if (!strcmp(arg1, "library") && (!strcmp(arg2, "dropbox") || !strcmp(arg2, "gdrive"))) {
+        if (!strcmp(arg1, "library") && (!strcmp(arg2, "dropbox") || !strcmp(arg2, "godrive"))) {
             //libnickel 4.23.15505 * _ZN14MoreControllerC1Ev
             MoreController *(*MoreController__MoreController)(MoreController* _this);
             NM_ACT_XSYM(MoreController__MoreController, "_ZN14MoreControllerC1Ev", "could not dlsym MoreController::MoreController");
